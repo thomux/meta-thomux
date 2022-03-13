@@ -1,6 +1,9 @@
 SUMMARY = "Thomux core image"
 
-IMAGE_INSTALL = "${CORE_IMAGE_EXTRA_INSTALL}"
+IMAGE_FEATURES:append = " ssh-server-dropbear"
+
+IMAGE_INSTALL:append = "  docker \
+                          dropbear vim"
 
 LICENSE = "MIT"
 
